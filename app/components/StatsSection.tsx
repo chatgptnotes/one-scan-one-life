@@ -70,52 +70,52 @@ export default function StatsSection() {
           <div className="relative">
             <div 
               ref={newsStripRef}
-              className="flex space-x-16 py-6 overflow-x-scroll scrollbar-hide whitespace-nowrap"
+              className="flex py-6 overflow-x-scroll scrollbar-hide whitespace-nowrap"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {/* Logos - doubled for continuous scroll effect */}
-              <div className="flex space-x-16 min-w-max">
-                <div className="flex items-center justify-center w-48">
-                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold">
+              <div className="flex min-w-max">
+                <div className="flex items-center justify-center px-14 mx-10">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-700 font-bold">
                     LOKMAT
                   </div>
                 </div>
-                <div className="flex items-center justify-center w-48">
-                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold">
+                <div className="flex items-center justify-center px-14 mx-10">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-700 font-bold">
                     LOKMAT TIMES
                   </div>
                 </div>
-                <div className="flex items-center justify-center w-48">
-                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold">
+                <div className="flex items-center justify-center px-14 mx-10">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-700 font-bold">
                     LOKMAT SAMACHAR
                   </div>
                 </div>
-                <div className="flex items-center justify-center w-48">
-                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold italic">
+                <div className="flex items-center justify-center px-14 mx-10">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-700 font-bold italic">
                     THE HITAVADA
                   </div>
                 </div>
               </div>
               
               {/* Duplicated set of logos for continuous scrolling effect */}
-              <div className="flex space-x-16 min-w-max">
-                <div className="flex items-center justify-center w-48">
-                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold">
+              <div className="flex min-w-max">
+                <div className="flex items-center justify-center px-14 mx-10">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-700 font-bold">
                     LOKMAT
                   </div>
                 </div>
-                <div className="flex items-center justify-center w-48">
-                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold">
+                <div className="flex items-center justify-center px-14 mx-10">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-700 font-bold">
                     LOKMAT TIMES
                   </div>
                 </div>
-                <div className="flex items-center justify-center w-48">
-                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold">
+                <div className="flex items-center justify-center px-14 mx-10">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-700 font-bold">
                     LOKMAT SAMACHAR
                   </div>
                 </div>
-                <div className="flex items-center justify-center w-48">
-                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold italic">
+                <div className="flex items-center justify-center px-14 mx-10">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-700 font-bold italic">
                     THE HITAVADA
                   </div>
                 </div>
