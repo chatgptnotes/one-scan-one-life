@@ -76,15 +76,6 @@ export default function StatsSection() {
               {/* Logos - doubled for continuous scroll effect */}
               <div className="flex space-x-16 min-w-max">
                 <div className="flex items-center justify-center w-48">
-                  <img src="/images/economic-times.png" alt="Economic Times" className="h-8 opacity-70" />
-                </div>
-                <div className="flex items-center justify-center w-48">
-                  <img src="/images/inc42.png" alt="Inc42" className="h-8 opacity-70" />
-                </div>
-                <div className="flex items-center justify-center w-48">
-                  <img src="/images/cnbc.png" alt="CNBC" className="h-8 opacity-70" />
-                </div>
-                <div className="flex items-center justify-center w-48">
                   <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold">
                     LOKMAT
                   </div>
@@ -102,14 +93,6 @@ export default function StatsSection() {
                 <div className="flex items-center justify-center w-48">
                   <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold italic">
                     THE HITAVADA
-                  </div>
-                </div>
-                <div className="flex items-center justify-center w-48">
-                  <img src="/images/yourstory.png" alt="YourStory" className="h-8 opacity-70" />
-                </div>
-                <div className="flex items-center justify-center w-48">
-                  <div className="flex items-center justify-center h-8 opacity-70 font-sans text-2xl text-gray-800 font-bold">
-                    ENTRACKR
                   </div>
                 </div>
               </div>
@@ -117,15 +100,6 @@ export default function StatsSection() {
               {/* Duplicated set of logos for continuous scrolling effect */}
               <div className="flex space-x-16 min-w-max">
                 <div className="flex items-center justify-center w-48">
-                  <img src="/images/economic-times.png" alt="Economic Times" className="h-8 opacity-70" />
-                </div>
-                <div className="flex items-center justify-center w-48">
-                  <img src="/images/inc42.png" alt="Inc42" className="h-8 opacity-70" />
-                </div>
-                <div className="flex items-center justify-center w-48">
-                  <img src="/images/cnbc.png" alt="CNBC" className="h-8 opacity-70" />
-                </div>
-                <div className="flex items-center justify-center w-48">
                   <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold">
                     LOKMAT
                   </div>
@@ -143,14 +117,6 @@ export default function StatsSection() {
                 <div className="flex items-center justify-center w-48">
                   <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold italic">
                     THE HITAVADA
-                  </div>
-                </div>
-                <div className="flex items-center justify-center w-48">
-                  <img src="/images/yourstory.png" alt="YourStory" className="h-8 opacity-70" />
-                </div>
-                <div className="flex items-center justify-center w-48">
-                  <div className="flex items-center justify-center h-8 opacity-70 font-sans text-2xl text-gray-800 font-bold">
-                    ENTRACKR
                   </div>
                 </div>
               </div>
