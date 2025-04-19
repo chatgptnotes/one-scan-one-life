@@ -100,6 +100,11 @@ export default function StatsSection() {
                   </div>
                 </div>
                 <div className="flex items-center justify-center w-48">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold italic">
+                    THE HITAVADA
+                  </div>
+                </div>
+                <div className="flex items-center justify-center w-48">
                   <img src="/images/yourstory.png" alt="YourStory" className="h-8 opacity-70" />
                 </div>
                 <div className="flex items-center justify-center w-48">
@@ -133,6 +138,11 @@ export default function StatsSection() {
                 <div className="flex items-center justify-center w-48">
                   <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold">
                     LOKMAT SAMACHAR
+                  </div>
+                </div>
+                <div className="flex items-center justify-center w-48">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold italic">
+                    THE HITAVADA
                   </div>
                 </div>
                 <div className="flex items-center justify-center w-48">
