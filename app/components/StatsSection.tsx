@@ -1,6 +1,33 @@
 "use client"
 
+import { useEffect, useRef } from 'react';
+
 export default function StatsSection() {
+  const newsStripRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const scrollElement = newsStripRef.current;
+    if (!scrollElement) return;
+
+    // Function to animate the horizontal scroll
+    const animateScroll = () => {
+      if (!scrollElement) return;
+      // When the scroll reaches the end, reset to beginning
+      if (scrollElement.scrollLeft >= (scrollElement.scrollWidth - scrollElement.clientWidth)) {
+        scrollElement.scrollLeft = 0;
+      } else {
+        // Smooth scrolling
+        scrollElement.scrollLeft += 1;
+      }
+    };
+
+    // Set up interval for scrolling animation
+    const interval = setInterval(animateScroll, 30);
+    
+    // Clean up interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="py-12 bg-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,19 +65,95 @@ export default function StatsSection() {
           </div>
         </div>
         
-        <div className="mt-16 grid grid-cols-4 gap-8">
-          <div className="flex justify-center">
-            <img src="/images/yourstory.png" alt="YourStory" className="h-8 opacity-60" />
+        {/* News Logos Horizontal Strip */}
+        <div className="mt-16 overflow-hidden">
+          <div className="relative">
+            <div 
+              ref={newsStripRef}
+              className="flex space-x-16 py-6 overflow-x-scroll scrollbar-hide whitespace-nowrap"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {/* Logos - doubled for continuous scroll effect */}
+              <div className="flex space-x-16 min-w-max">
+                <div className="flex items-center justify-center w-48">
+                  <img src="/images/economic-times.png" alt="Economic Times" className="h-8 opacity-70" />
+                </div>
+                <div className="flex items-center justify-center w-48">
+                  <img src="/images/inc42.png" alt="Inc42" className="h-8 opacity-70" />
+                </div>
+                <div className="flex items-center justify-center w-48">
+                  <img src="/images/cnbc.png" alt="CNBC" className="h-8 opacity-70" />
+                </div>
+                <div className="flex items-center justify-center w-48">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold">
+                    LOKMAT
+                  </div>
+                </div>
+                <div className="flex items-center justify-center w-48">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold">
+                    LOKMAT TIMES
+                  </div>
+                </div>
+                <div className="flex items-center justify-center w-48">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold">
+                    LOKMAT SAMACHAR
+                  </div>
+                </div>
+                <div className="flex items-center justify-center w-48">
+                  <img src="/images/yourstory.png" alt="YourStory" className="h-8 opacity-70" />
+                </div>
+                <div className="flex items-center justify-center w-48">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-sans text-2xl text-gray-800 font-bold">
+                    ENTRACKR
+                  </div>
+                </div>
+              </div>
+              
+              {/* Duplicated set of logos for continuous scrolling effect */}
+              <div className="flex space-x-16 min-w-max">
+                <div className="flex items-center justify-center w-48">
+                  <img src="/images/economic-times.png" alt="Economic Times" className="h-8 opacity-70" />
+                </div>
+                <div className="flex items-center justify-center w-48">
+                  <img src="/images/inc42.png" alt="Inc42" className="h-8 opacity-70" />
+                </div>
+                <div className="flex items-center justify-center w-48">
+                  <img src="/images/cnbc.png" alt="CNBC" className="h-8 opacity-70" />
+                </div>
+                <div className="flex items-center justify-center w-48">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold">
+                    LOKMAT
+                  </div>
+                </div>
+                <div className="flex items-center justify-center w-48">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold">
+                    LOKMAT TIMES
+                  </div>
+                </div>
+                <div className="flex items-center justify-center w-48">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-serif text-2xl text-gray-800 font-bold">
+                    LOKMAT SAMACHAR
+                  </div>
+                </div>
+                <div className="flex items-center justify-center w-48">
+                  <img src="/images/yourstory.png" alt="YourStory" className="h-8 opacity-70" />
+                </div>
+                <div className="flex items-center justify-center w-48">
+                  <div className="flex items-center justify-center h-8 opacity-70 font-sans text-2xl text-gray-800 font-bold">
+                    ENTRACKR
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="flex justify-center">
-            <img src="/images/economic-times.png" alt="Economic Times" className="h-8 opacity-60" />
-          </div>
-          <div className="flex justify-center">
-            <img src="/images/inc42.png" alt="Inc42" className="h-8 opacity-60" />
-          </div>
-          <div className="flex justify-center">
-            <img src="/images/cnbc.png" alt="CNBC" className="h-8 opacity-60" />
-          </div>
+
+          {/* Apply custom styles to hide scrollbar */}
+          <style jsx>{`
+            /* Hide scrollbar for Chrome, Safari and Opera */
+            div::-webkit-scrollbar {
+              display: none;
+            }
+          `}</style>
         </div>
       </div>
     </div>
