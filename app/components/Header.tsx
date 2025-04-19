@@ -104,9 +104,16 @@ export default function Header() {
                     {activeDropdown === 'departments' && (
                       <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50 border border-gray-100">
                         {departmentsList.map((dept, idx) => (
-                          <a key={idx} href="#" className="block px-4 py-3 text-lg text-gray-800 hover:bg-gray-50 hover:text-cyan-600">
+                          <Link 
+                            key={idx} 
+                            href={dept.toLowerCase() === 'cardiology' ? '/departments/cardiology' : '#'} 
+                            className="block px-4 py-3 text-lg text-gray-800 hover:bg-gray-50 hover:text-cyan-600"
+                          >
                             {dept}
-                          </a>
+                            {dept.toLowerCase() === 'cardiology' && (
+                              <span className="float-right text-sm bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">New</span>
+                            )}
+                          </Link>
                         ))}
                       </div>
                     )}

@@ -45,15 +45,12 @@ export default function AnohraChatBot() {
     <div className="fixed bottom-5 right-5 z-50">
       {isOpen && (
         <div className="bg-white rounded-lg shadow-xl w-80 sm:w-96 mb-4 border border-blue-100 overflow-hidden">
-          <div className="bg-gradient-to-r from-blue-500 to-cyan-400 px-4 py-3 flex justify-between items-center">
+          <div className="bg-gradient-to-r from-blue-600 to-cyan-500 px-4 py-3 flex justify-between items-center">
             <div className="flex items-center">
-              <div className="h-8 w-8 relative mr-2 rounded-full overflow-hidden bg-white p-1">
-                <Image
-                  src="/images/anohra.jpeg"
-                  alt="Anohra"
-                  fill
-                  className="object-contain"
-                />
+              <div className="h-8 w-8 relative mr-3 rounded-full overflow-hidden bg-white p-1 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd" />
+                </svg>
               </div>
               <h3 className="text-white font-medium">Anohra - Healthcare Assistant</h3>
             </div>
@@ -104,16 +101,11 @@ export default function AnohraChatBot() {
       
       <button
         onClick={toggleChat}
-        className={`bg-gradient-to-r from-blue-500 to-cyan-400 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center h-14 w-14 ${isOpen ? 'hidden' : 'animate-pulse'}`}
+        className={`bg-gradient-to-r from-blue-600 to-cyan-500 text-white p-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center h-16 w-16 ${isOpen ? 'hidden' : 'animate-pulse border-2 border-white'}`}
       >
-        <div className="relative h-10 w-10">
-          <Image
-            src="/images/anohra.jpeg"
-            alt="Anohra Chat Bot"
-            fill
-            className="object-contain rounded-full"
-          />
-        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd" />
+        </svg>
       </button>
     </div>
   );
