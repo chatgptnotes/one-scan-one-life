@@ -1,8 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Doctor Profile - Dr. Murali BK
+
+This is a Next.js project that showcases a professional profile page for Dr. Murali BK, an Orthopaedic Surgeon specializing in Joint Replacement.
+
+## Features
+
+- Responsive design for all device sizes
+- Modern UI with clean aesthetics
+- Sections for doctor's information, qualifications, experience, treatments, and hospitals
+- Appointment booking interface
+- Ratings and reviews display
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -10,15 +30,40 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/page.tsx` - The main doctor profile page
+- `app/layout.tsx` - The root layout with metadata
+- `app/globals.css` - Global CSS variables and styles
+- `public/images/` - Contains placeholder images for the doctor and hospital
+
+## Customizing
+
+To customize this profile for a different doctor:
+
+1. Update the content in `app/page.tsx` with the doctor's information
+2. Change the metadata in `app/layout.tsx`
+3. Replace placeholder images in the `public/images/` directory
+4. Adjust colors and styling in `app/globals.css` if desired
+
+## Technologies Used
+
+- Next.js 13+ with App Router
+- TypeScript
+- Tailwind CSS
+- React
+
+## Note About Images
+
+The current implementation uses placeholder images. For a production site, replace these with actual images:
+
+- Doctor's image: Replace `/public/images/doctor-placeholder.jpg` with Dr. Murali BK's photo
+  - Attempted image URL: https://www.hopehospital.com/wp-content/uploads/2020/10/DR-MURALI-17-768x1152.jpg
+- Hospital images: Replace `/public/images/hospital-placeholder.jpg` with actual hospital logos
 
 ## Learn More
 

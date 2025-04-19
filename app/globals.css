@@ -1,8 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --primary: #3b82f6;
+  --primary-dark: #1e40af;
+  --secondary: #8b5cf6;
+  --accent: #06b6d4;
+  --gray-light: #f1f5f9;
+  --gray-medium: #94a3b8;
+  --gray-dark: #475569;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --soft-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 @theme inline {
@@ -14,13 +26,133 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f8fafc;
+    --foreground: #0f172a;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+input, button, select, textarea {
+  font-family: inherit;
+}
+
+/* Override default focus styles */
+*:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Modern Card Styles */
+.modern-card {
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modern-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Gradient Buttons */
+.gradient-btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.gradient-btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.gradient-btn-secondary {
+  background: white;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.gradient-btn-secondary:hover {
+  background: var(--gray-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Animated Backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+}
+
+/* Pill Badges */
+.pill-badge {
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.pill-badge-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.pill-badge-secondary {
+  background: var(--gray-light);
+  color: var(--gray-dark);
+}
+
+/* Subtle animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Active tab styling */
+.tab-active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  font-weight: 500;
+}
+
+/* Rating stars */
+.rating-stars .star {
+  color: #e5e7eb;
+}
+
+.rating-stars .star.filled {
+  color: #f59e0b;
+}
+
+/* Responsive container */
+.responsive-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
