@@ -74,15 +74,13 @@ export default function Header() {
               {/* Logo */}
               <div className="flex-shrink-0 flex items-center">
                 <Link href="/" className="flex items-center">
-                  <div className="w-10 h-10 relative mr-2">
-                    <div className="absolute inset-0 bg-cyan-500 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xl font-bold">O</span>
-                    </div>
-                  </div>
-                  <div>
-                    <span className="text-cyan-500 font-bold text-xl">One Scan</span>
-                    <span className="text-gray-800 font-bold text-xl">One Life</span>
-                  </div>
+                  <Image 
+                    src="/images/Web-logo.png" 
+                    alt="One Scan One Life Logo"
+                    width={150}
+                    height={40}
+                    className="h-10 w-auto"
+                  />
                 </Link>
               </div>
               

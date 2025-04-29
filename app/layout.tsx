@@ -15,23 +15,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dr. Murali BK - Orthopaedic Surgeon & Joint Replacement Specialist",
-  description: "Book an appointment with Dr. Murali BK, leading Orthopaedic Surgeon specializing in Joint Replacement with 15+ years of experience",
+  title: "One Scan One Life",
+  description: "Emergency Medical Services",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-        <AnohraChatBotWrapper />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
